@@ -1,5 +1,5 @@
 <h1 align="center"> O-API </h1>
-<h2 align="center"> v0.13.0-beta </h2>
+<h2 align="center"> v0.14.0-beta </h2>
 <br>
 <br>
 
@@ -121,6 +121,7 @@ Once the application is running, navigate to `http://localhost:3000/api` to acce
 - **Cart**: Add/Remove items, Update quantities (Stored in Redis).
 - **Orders**: Checkout process, Order status tracking.
 - **Payments**: Initiate and verify transactions (Mock gateway included).
+- **Reviews & Ratings**:can rate and review products, and like or dislike the reviews left by others.
 
 ---
 
@@ -133,9 +134,9 @@ Once the application is running, navigate to `http://localhost:3000/api` to acce
 - [x] Payment & Order Processing (Mock)
 - [x] Swagger Documentation
 - [x] CI/CD Pipeline (GitHub Actions)
+- [x] Product Reviews & Ratings
 - [ ] Real Payment Gateway Integration (ZarinPal)
 - [ ] Address Management Module
-- [ ] Product Reviews & Ratings
 - [ ] Automated Unit & E2E Testing
 
 ---

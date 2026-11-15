@@ -1,14 +1,15 @@
-import { Body, Controller, Get, Param, Post, UseGuards, Inject } from '@nestjs/common';
-import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
+import { Body, Controller, Get, Param, Post, UseGuards, Inject, UseInterceptors, UploadedFile, ParseFilePipe, MaxFileSizeValidator, FileTypeValidator } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiBearerAuth, ApiConsumes, ApiBody } from '@nestjs/swagger';
 import { ReviewService } from '../Services/Review.service.js';
 import { CreateReviewDto } from '../Dtos/CreateReview.dto.js';
 import { JwtAuthGuard } from '../../../../Shared/Guards/JwtAuth.guard.js';
 import { GetUser } from '../../../../Shared/Decorators/GetUser.decorator.js';
+import { FileInterceptor } from '@nestjs/platform-express';
 
 @ApiTags('Reviews')
 @Controller('reviews')
 export class ReviewController {
-    constructor(@Inject(ReviewService) private readonly reviewService: ReviewService) {}
+    constructor(@Inject(ReviewService) private readonly reviewService: ReviewService) { }
 
     // create
     @ApiBearerAuth()
@@ -42,5 +43,37 @@ export class ReviewController {
     @Post(':id/dislike')
     async dislike(@Param('id') id: string, @GetUser('sub') userId: string) {
         return this.reviewService.dislikeReview(id, userId);
+    }
+    // upload
+    @ApiBearerAuth()
+    @ApiOperation({ summary: 'Upload an image for a review' })
+     @ApiConsumes('multipart/form-data')
+    @ApiBody({                         
+        schema: {
+            type: 'object',
+            properties: {
+                image: {
+                    type: 'string',
+                    format: 'binary',
+                },
+            },
+        },
+    })
+    @UseGuards(JwtAuthGuard)
+    @Post(':id/images')
+    @UseInterceptors(FileInterceptor('image'))
+    async uploadImage(
+        @Param('id') id: string,
+        @UploadedFile(
+            new ParseFilePipe({
+                validators: [
+                    new MaxFileSizeValidator({ maxSize: 2 * 1024 * 1024 }),
+                    new FileTypeValidator({ fileType: '.(png|jpeg|jpg|webp)' }),
+                ],
+            }),
+        ) file: Express.Multer.File,
+        @GetUser('sub') userId: string,
+    ) {
+        return this.reviewService.uploadReviewImage(id, file, userId);
     }
 }

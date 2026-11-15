@@ -6,6 +6,7 @@ import { ReviewSchema, ReviewSchemaFactory } from './Infrastructure/Schemas/Revi
 import { ReviewRepositoryImpl } from './Infrastructure/Repositories/Review.repository.impl.js';
 import { AuthSharedModule } from '../../Shared/AuthShared.module.js';
 import { ProductModule } from '../Product/Product.module.js';
+import { LocalStorageService } from '../../Shared/Storage/LocalStorage.service.js';
 
 @Module({
     imports: [
@@ -17,6 +18,7 @@ import { ProductModule } from '../Product/Product.module.js';
     providers: [
         ReviewService,
         { provide: 'IReviewRepository', useClass: ReviewRepositoryImpl },
+        { provide: 'IStorageService', useClass: LocalStorageService },
     ],
 })
 export class ReviewModule {}

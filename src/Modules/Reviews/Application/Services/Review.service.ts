@@ -1,11 +1,12 @@
-import { BadRequestException, Inject, Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, ForbiddenException, Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { IReviewRepository } from '../../Domain/Repositories/Review.repository.interface.js';
-import { IProductRepository } from '../../../Product/Domain/Repositories/Product.repository.interface.js'; // 👈 اضافه شد
-import { ProductId } from '../../../Product/Domain/ValueObjects/ProductId.vo.js'; // 👈 اضافه شد
+import { IProductRepository } from '../../../Product/Domain/Repositories/Product.repository.interface.js';
+import { ProductId } from '../../../Product/Domain/ValueObjects/ProductId.vo.js'; 
 import { Review } from '../../Domain/Entities/Review.entity.js';
 import { CreateReviewDto } from '../Dtos/CreateReview.dto.js';
 import { ReviewResponseDto } from '../Dtos/ReviewResponse.dto.js';
 import { ReviewResponseMapper } from '../Mappers/Review.mapper.js';
+import { IStorageService } from '../../../../Shared/Storage/IStorage.service.js';
 
 @Injectable()
 export class ReviewService {
@@ -14,6 +15,8 @@ export class ReviewService {
         private readonly reviewRepository: IReviewRepository,
         @Inject('IProductRepository')
         private readonly productRepository: IProductRepository,
+         @Inject('IStorageService')
+        private readonly storageService: IStorageService,
     ) {}
 
     // create
@@ -63,5 +66,23 @@ export class ReviewService {
         review.addDislike(userId);
         await this.reviewRepository.save(review);
         return ReviewResponseMapper.toResponse(review); // mapper
+    }
+    // upload image
+    async uploadReviewImage(
+        reviewId: string, 
+        file: Express.Multer.File, 
+        userId: string
+    ): Promise<ReviewResponseDto> {
+        const review = await this.reviewRepository.findById(reviewId);
+        if (!review) throw new NotFoundException('Review not found');
+        if (review.getUserId() !== userId) {
+            throw new ForbiddenException('You can only add images to your own reviews');
+        }
+        const imageUrl = await this.storageService.uploadFile(file, 'reviews');
+        
+        review.addImage(imageUrl);
+        
+        await this.reviewRepository.save(review);
+        return ReviewResponseMapper.toResponse(review);
     }
 }

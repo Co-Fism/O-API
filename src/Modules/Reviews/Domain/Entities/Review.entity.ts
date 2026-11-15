@@ -1,4 +1,5 @@
 import { AggregateRoot } from '../../../../Shared/Domain/AggregateRoot.js';
+import { ErrorReasonImagesPerReview, ImagesPerReviewException } from '../Exceptions/ImagePerReview.exception.js';
 import { ErrorReasonLikeSelf, LikeSelfException } from '../Exceptions/LikeSelf.exception.js';
 import { Rating } from '../ValueObjects/Rating.vo.js';
 import { ReviewId } from '../ValueObjects/ReviewId.vo.js';
@@ -24,7 +25,7 @@ export class Review extends AggregateRoot {
         title: string;
         body: string;
         rating: number;
-        images?: string[]| undefined;
+        images?: string[] | undefined;
     }): Review {
         return new Review(
             ReviewId.generate().toString(),
@@ -55,10 +56,10 @@ export class Review extends AggregateRoot {
         if (this.userId === userId) {
             throw new LikeSelfException(ErrorReasonLikeSelf.LIKESELF);
         }
-        
+
         // remove from dislikes if exists
         this.dislikes = this.dislikes.filter(id => id !== userId);
-        
+
         if (!this.likes.includes(userId)) {
             this.likes.push(userId);
             this.touch();
@@ -76,10 +77,10 @@ export class Review extends AggregateRoot {
         if (this.userId === userId) {
             throw new LikeSelfException(ErrorReasonLikeSelf.DISLIKESELF);
         }
-        
+
         // remove from likes if exists
         this.likes = this.likes.filter(id => id !== userId);
-        
+
         if (!this.dislikes.includes(userId)) {
             this.dislikes.push(userId);
             this.touch();
@@ -91,7 +92,14 @@ export class Review extends AggregateRoot {
         this.dislikes = this.dislikes.filter(id => id !== userId);
         this.touch();
     }
-
+    // add image
+    addImage(imageUrl: string): void {
+        if (this.images.length >= 5) {
+            throw new ImagesPerReviewException(ErrorReasonImagesPerReview.MAXPER);
+        }
+        this.images.push(imageUrl);
+        this.touch();
+    }
     private touch(): void {
         this.updatedAt = new Date();
     }

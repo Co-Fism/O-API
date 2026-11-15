@@ -14,15 +14,15 @@ class UserSchema {
     fullName!: string;
 
     // prop
-    @Prop({ type: String, required: false, default: null, unique: true, sparse: true })
+    @Prop({ type: String, required: false, unique: true })
     username?: string;
 
     // prop
-    @Prop({ type: String, required: false, default: null, unique: true, sparse: true })
+    @Prop({ type: String, required: false, unique: true })
     email?: string;
 
     // prop
-    @Prop({ type: String, required: false, default: null })
+    @Prop({ type: String, required: false })
     password?: string;
 
     // prop
@@ -46,5 +46,13 @@ class UserSchema {
 
 // factory
 const UserSchemaFactory = SchemaFactory.createForClass(UserSchema);
+UserSchemaFactory.index(
+    { username: 1 },
+    { unique: true, partialFilterExpression: { username: { $type: 'string' } } }
+);
 
+UserSchemaFactory.index(
+    { email: 1 },
+    { unique: true, partialFilterExpression: { email: { $type: 'string' } } }
+);
 export { type UserDocument, UserSchemaFactory, UserSchema }

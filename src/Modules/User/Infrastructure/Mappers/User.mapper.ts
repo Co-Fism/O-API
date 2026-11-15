@@ -45,7 +45,7 @@ class UserInfrastructureMapper {
 
     // persistence
     static toPersistence(user: UserTemp): any {
-        return {
+        const data:any= {
             _id: user.getId().getValue(),
             fullName: user.getFullname().getValue(),
             username: user.getUsername()?.getValue() ?? null,
@@ -57,6 +57,15 @@ class UserInfrastructureMapper {
             createdAt: user.getCreatedAt(),
             updatedAt: user.getUpdatedAt(),
         };
+        const username = user.getUsername()?.getValue();
+        if (username) data.username = username;
+
+        const email = user.getEmail()?.getValue();
+        if (email) data.email = email;
+
+        const password = user.getPassword()?.getValue();
+        if (password) data.password = password;
+        return data;
     }
 }
 

@@ -20,6 +20,7 @@ import { OrderModule } from './Modules/Order/Order.module.js';
 import { NotificationModule } from './Modules/Notification/Notification.module.js';
 import { RedisModule } from './Shared/Redis/Redis.module.js';
 import { AuthModule } from './Modules/Auth/Auth.module.js';
+import { ReviewModule } from './Modules/Reviews/Review.module.js';
 
 @Module({
     imports: [
@@ -97,7 +98,8 @@ import { AuthModule } from './Modules/Auth/Auth.module.js';
         OrderModule,
         NotificationModule,
         AuthModule,
-        RedisModule
+        RedisModule,
+        ReviewModule
     ],
     controllers: [],
     providers: [

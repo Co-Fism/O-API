@@ -1,35 +1,8 @@
-O-API · Material Icon Theme — Verified Icons
-<p><b>Repository:</b> <a href="https://github.com/mhndsy37-cmd/O-API">mhndsy37-cmd/O-API</a></p>
-<p><b>Snapshot commit:</b> <code>ccb6dc12a77a924e4461c2d62429f9c44a670b61</code> · <b>Tree entries:</b> 257</p>Icons in this document are direct SVG links from the official
-<a href="https://github.com/material-extensions/vscode-material-icon-theme">Material Icon Theme</a>
-repository. Each SVG filename used below was checked against the upstream icons listing.
-The upstream theme may use icon associations for filenames (such as NestJS services), rather than a standalone SVG file for every association.
-Icon samples
-<p>
-<img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/folder-src.svg" width="16" height="16" alt="" /> src &nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/folder-shared.svg" width="16" height="16" alt="" /> Shared &nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/folder-controller.svg" width="16" height="16" alt="" /> Controllers &nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/folder-repository.svg" width="16" height="16" alt="" /> Repositories &nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/typescript.svg" width="16" height="16" alt="" /> TypeScript &nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/controller.svg" width="16" height="16" alt="" /> Controller file &nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/nest.svg" width="16" height="16" alt="" /> NestJS &nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/json.svg" width="16" height="16" alt="" /> JSON &nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/docker.svg" width="16" height="16" alt="" /> Docker
-</p>Module overview
-Module	Main responsibilities
-Address	Address records, postal-code validation, value object, repository and schema
-Auth	OTP flow and Redis-backed OTP repository
-Cart	Cart operations, events, validation, mapping and Redis persistence
-Notification	Event handlers and provider/service layer
-Order	Checkout and order lifecycle, events, repository, mapper and schema
-Payment	Payment initiation/verification, gateway abstractions and persistence
-Product	Products/categories, stock/price/title, events, validation and persistence
-Reviews	Review/rating domain, validation, mapping and persistence
-User	Users, credentials, roles/status, lifecycle events and persistence
-Shared	Auth, configuration, guards, decorators, filters, interceptors, storage, Redis and utilities
+<h1 align="center">O-API</h1>
+<h2 align="center">0.15.2</h2>
+<h2 align="center">mhndsy-cmd (Fism)</h2>
 
 
-Complete tree
 <ul>
 <li><img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/folder-other.svg" width="16" height="16" alt="" /> <code>github</code><ul><li><img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/folder-other.svg" width="16" height="16" alt="" /> <code>workflows</code><ul><li><img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/yaml.svg" width="16" height="16" alt="" /> <code>ci.yml</code></li></ul></li></ul></li>
 <li><img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/folder-src.svg" width="16" height="16" alt="" /> <code>src</code><ul><li><img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/icons/nest.svg" width="16" height="16" alt="" /> <code>app.module.ts</code></li>

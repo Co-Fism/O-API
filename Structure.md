@@ -3,262 +3,192 @@
 <h2 align="center">mhndsy-cmd (Fism)</h2>
 
 
-<ul>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>github</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>workflows</code><ul><li><img src="https://api.iconify.design/vscode-icons/file-type-yaml.svg" width="16" height="16" alt="" /> <code>ci.yml</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-open.svg" width="16" height="16" alt="" /> <code>src</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>app.module.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>instrument.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>main.ts</code></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Modules</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Address</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Address.module.ts</code></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Application</code><ul><li><img src="https://api.iconify.design/mdi/folder-cog.svg" width="16" height="16" alt="" /> <code>Controllers</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Address.controller.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Dtos</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>AddressResponse.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CreateAddress.dto.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Services</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Address.service.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Domain</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Entities</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Address.entity.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Exceptions</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PostalCodeMustExactly.exception.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Address.repository.interface.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>ValueObjects</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PostalCode.vo.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Infrastructure</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Mappers</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Address.mapper.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Address.repository.impl.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Schemas</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Address.schema.ts</code></li></ul></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Auth</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Application</code><ul><li><img src="https://api.iconify.design/mdi/folder-cog.svg" width="16" height="16" alt="" /> <code>Controllers</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Auth.controller.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Dtos</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>RequestOtp.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>VerifyOtp.dto.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Services</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Auth.service.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Auth.module.ts</code></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Domain</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Entities</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Otp.entity.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-list.svg" width="16" height="16" alt="" /> <code>Enums</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>OtpChannel.enum.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Otp.repository.interface.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Infrastructure</code><ul><li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>RedisOtp.repository.impl.ts</code></li></ul></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Cart</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Application</code><ul><li><img src="https://api.iconify.design/mdi/folder-cog.svg" width="16" height="16" alt="" /> <code>Controllers</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Cart.controller.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Dtos</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>AddToCart.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CartResponse.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UpdateCartItem.dto.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Mapper</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Cart.mapper.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Services</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Cart.service.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Cart.module.ts</code></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Domain</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Entities</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Cart.entity.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-star.svg" width="16" height="16" alt="" /> <code>Events</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CartCleared.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CartItemAdded.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CartItemQuantityUpdated.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CartItemRemove.event.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Exceptions</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CartItemNotFound.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidCartId.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidCartQuantity.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>maxPerItem.exception.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Cart.repository.interface.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>ValueObjects</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CartId.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CartItem.vo.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Infrastructure</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Mapper</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Cart.mapper.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Cart.repository.impl.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>RedisCart.repository.impl.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Schemas</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Cart.schema.ts</code></li></ul></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Notification</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Application</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Handlers</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>OrderStatusChanged.handler.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PaymentSucceeded.handler.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserRegistered.handler.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Services</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Notification.service.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Domain</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Entities</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>NotificationLog.entity.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-list.svg" width="16" height="16" alt="" /> <code>Enums</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>NotificationChannel.enum.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>NotificationStatus.enum.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-code.svg" width="16" height="16" alt="" /> <code>Interfaces</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>INotificationProvider.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Infrastructure</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Providers</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>MockNotificationProvider.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Notification.module.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Order</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Application</code><ul><li><img src="https://api.iconify.design/mdi/folder-cog.svg" width="16" height="16" alt="" /> <code>Controllers</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Order.controller.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Dtos</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Checkout.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>OrderResponse.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UpdateOrderStatus.dto.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Services</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Order.service.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Domain</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Entities</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Order.entity.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Order.props.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-list.svg" width="16" height="16" alt="" /> <code>Enums</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>OrderStatus.enum.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-star.svg" width="16" height="16" alt="" /> <code>Events</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>OrderPaid.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>OrderStatusChanged.event.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Exceptions</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidOrderId.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidOrderStatus.exception.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Order.repository.interface.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>ValueObjects</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>OrderId.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>OrderItem.vo.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Infrastructure</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Mappers</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Order.mapper.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Order.repository.impl.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Schemas</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Order.schema.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Order.module.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Payment</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Application</code><ul><li><img src="https://api.iconify.design/mdi/folder-cog.svg" width="16" height="16" alt="" /> <code>Controllers</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Payment.controller.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Dtos</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InitiatePayment.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>VerifyPayment.dto.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Services</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Payment.service.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Domain</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Entities</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Payment.entity.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-list.svg" width="16" height="16" alt="" /> <code>Enums</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PaymentGateway.enum.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PaymentStatus.enum.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-star.svg" width="16" height="16" alt="" /> <code>Events</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PaymentSucceeded.event.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Exceptions</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Alreadysuccessfully.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidPaymentId.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>OnlyTransactionsPending.exception.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Payment.repository.interface.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>ValueObjects</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PaymentId.vo.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Infrastructure</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Gateways</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>MockPayment.gateway.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Mappers</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Payment.mapper.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Payment.repository.impl.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Schemas</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Payment.schema.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Payment.module.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Product</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Application</code><ul><li><img src="https://api.iconify.design/mdi/folder-cog.svg" width="16" height="16" alt="" /> <code>Controllers</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Category.controller.ts</code></li>
-<li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Product.controller.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Dtos</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CreateCategory.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductCreate.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductListResponse.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductResponse.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>RestockProduct.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UpdateProduct.dto.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Mappers</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Product.mapper.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Services</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Category.service.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Product.service.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Category.module.ts</code></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Domain</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Entities</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Category.entity.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Product.entity.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Product.props.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-list.svg" width="16" height="16" alt="" /> <code>Enums</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductReduceStock.enum.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductStatus.enum.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-star.svg" width="16" height="16" alt="" /> <code>Events</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductChangePrice.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductCreate.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductDescriptionChanged.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductOutofStock.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductStockChanged.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductTitleChanged.event.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Exceptions</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Forbidden.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidId.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidPrice.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidStock.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidTitle.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>MaxUploadImages.exception.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Category.repository.interface.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Product.repository.interface.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>ValueObjects</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Price.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ProductId.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Stock.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Title.vo.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Infrastructure</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Mappers</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Product.mapper.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Category.repository.impl.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Product.repository.impl.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Schemas</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Category.schema.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Product.schema.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Product.module.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Reviews</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Application</code><ul><li><img src="https://api.iconify.design/mdi/folder-cog.svg" width="16" height="16" alt="" /> <code>Controllers</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Review.controller.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Dtos</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CreateReview.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ReviewResponse.dto.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Mappers</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Review.mapper.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Services</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Review.service.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Domain</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Entities</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Review.entity.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Exceptions</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ImagePerReview.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidId.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>LikeSelf.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Rating.exception.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Review.repository.interface.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>ValueObjects</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Rating.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ReviewId.vo.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Infrastructure</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Mappers</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Review.mapper.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Review.repository.impl.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Schemas</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Review.schema.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Review.module.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>User</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Application</code><ul><li><img src="https://api.iconify.design/mdi/folder-cog.svg" width="16" height="16" alt="" /> <code>Controllers</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>User.controller.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Dtos</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ActivateUser.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ChangeEmail.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ChangePassword.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ChangePhonenumber.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ChangeRole.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CheckLoginIdentifier.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CreateUser.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>LoginUserWithEmailPassword.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>LoginUserWithPhonenumberPassword.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>LoginUserWithUsernamePassword.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PromoteUser.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>RegisterCustomer.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UpdateUser.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserListResponse.dto.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserResponse.dto.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Services</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>User.service.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Domain</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Entities</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>User.entity.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>User.props.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-list.svg" width="16" height="16" alt="" /> <code>Enums</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Role.enum.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Status.enum.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-star.svg" width="16" height="16" alt="" /> <code>Events</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>EmailChange.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>FullnameChange.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PasswordChange.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PhoneNumberChange.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>RoleChange.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserActivate.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserBlock.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserHardDelete.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UsernameChanged.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserRegistered.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserRestore.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserSoftDelete.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserSuspend.event.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserUnblock.event.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Exceptions</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>AssignCredentials.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CannotBlockYourself.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CannotChangeOwnRole.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>CannotDeleteYourself.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Email.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>EmailSameAsOld.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Fullname.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>FullnameSameAsOld.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InsufficientPermissions.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidCurrentPassword.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>InvalidUserid.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Password.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PasswordSameAsOld.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Phonenumber.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PhoneNumberSameAsOld.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Role.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>RoleSameAsOld.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Status.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>StatusTrans.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserCannotBeModified.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Username.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UsernameSameAsOld.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserNotDelete.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserNotFound.exception.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserNotFoundExceptionEP.exception.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>User.repository.interface.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>ValueObjects</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Email.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Fullname.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Password.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Phonenumber.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Role.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Status.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>UserId.vo.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Username.vo.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Infrastructure</code><ul><li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Mappers</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>User.mapper.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-network.svg" width="16" height="16" alt="" /> <code>Repositories</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>User.repsitory.impl.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Schemas</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>User.schema.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>User.module.ts</code></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-account.svg" width="16" height="16" alt="" /> <code>Shared</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>AuthShared.module.ts</code></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Configs</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>env.validation.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Decorators</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>GetUser.decorator.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Roles.decorator.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Domain</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>AggregateRoot.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Exceptions</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>DomainException.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-filter.svg" width="16" height="16" alt="" /> <code>Filters</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>DomainException.filter.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-shield.svg" width="16" height="16" alt="" /> <code>Guards</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>JwtAuth.guard.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>OptionalJwtAuth.guard.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Roles.guard.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder-sync.svg" width="16" height="16" alt="" /> <code>Interceptors</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Transform.interceptor.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Ports</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>PaymentGateway.interface.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Redis</code><ul><li><img src="https://api.iconify.design/logos/nestjs.svg" width="16" height="16" alt="" /> <code>Redis.module.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Storage</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>IStorage.service.ts</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>LocalStorage.service.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Utils</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>Hash.util.ts</code></li></ul></li>
-<li><img src="https://api.iconify.design/mdi/folder.svg" width="16" height="16" alt="" /> <code>Validators</code><ul><li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>ImageDimension.validator.ts</code></li></ul></li></ul></li></ul></li>
-<li><img src="https://api.iconify.design/vscode-icons/file-type-yaml.svg" width="16" height="16" alt="" /> <code>docker-compose.yml</code></li>
-<li><img src="https://api.iconify.design/logos/docker-icon.svg" width="16" height="16" alt="" /> <code>Dockerfile</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>dockerignore</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>editorconfig</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>env.example</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>gitignore</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>LICENSE</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>md</code></li>
-<li><img src="https://api.iconify.design/logos/typescript-icon.svg" width="16" height="16" alt="" /> <code>O-API-Structure.txt</code></li>
-<li><img src="https://api.iconify.design/vscode-icons/file-type-json.svg" width="16" height="16" alt="" /> <code>package-lock.json</code></li>
-<li><img src="https://api.iconify.design/vscode-icons/file-type-json.svg" width="16" height="16" alt="" /> <code>package.json</code></li>
-<li><img src="https://api.iconify.design/vscode-icons/file-type-yaml.svg" width="16" height="16" alt="" /> <code>pnpm-lock.yaml</code></li>
-<li><img src="https://api.iconify.design/vscode-icons/file-type-markdown.svg" width="16" height="16" alt="" /> <code>README.md</code></li>
-<li><img src="https://api.iconify.design/vscode-icons/file-type-json.svg" width="16" height="16" alt="" /> <code>tsconfig.json</code></li>
-</ul>
+<pre>
+O-API/
+├── .github/
+│   └── workflows/
+├── src/
+│   ├── Modules/
+│   │   ├── Address/
+│   │   │   ├── Application/
+│   │   │   │   ├── Controllers/
+│   │   │   │   ├── Dtos/
+│   │   │   │   └── Services/
+│   │   │   ├── Domain/
+│   │   │   │   ├── Entities/
+│   │   │   │   ├── Exceptions/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── ValueObjects/
+│   │   │   ├── Infrastructure/
+│   │   │   │   ├── Mappers/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── Schemas/
+│   │   │   └── Address.module.ts
+│   │   │
+│   │   ├── Auth/
+│   │   │   ├── Application/
+│   │   │   │   ├── Controllers/
+│   │   │   │   ├── Dtos/
+│   │   │   │   └── Services/
+│   │   │   ├── Domain/
+│   │   │   │   ├── Entities/
+│   │   │   │   ├── Enums/
+│   │   │   │   └── Repositories/
+│   │   │   ├── Infrastructure/
+│   │   │   │   └── Repositories/
+│   │   │   └── Auth.module.ts
+│   │   │
+│   │   ├── Cart/
+│   │   │   ├── Application/
+│   │   │   │   ├── Controllers/
+│   │   │   │   ├── Dtos/
+│   │   │   │   ├── Mapper/
+│   │   │   │   └── Services/
+│   │   │   ├── Domain/
+│   │   │   │   ├── Entities/
+│   │   │   │   ├── Events/
+│   │   │   │   ├── Exceptions/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── ValueObjects/
+│   │   │   ├── Infrastructure/
+│   │   │   │   ├── Mapper/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── Schemas/
+│   │   │   └── Cart.module.ts
+│   │   │
+│   │   ├── Notification/
+│   │   │   ├── Application/
+│   │   │   │   ├── Handlers/
+│   │   │   │   └── Services/
+│   │   │   ├── Domain/
+│   │   │   │   ├── Entities/
+│   │   │   │   ├── Enums/
+│   │   │   │   └── Interfaces/
+│   │   │   ├── Infrastructure/
+│   │   │   │   └── Providers/
+│   │   │   └── Notification.module.ts
+│   │   │
+│   │   ├── Order/
+│   │   │   ├── Application/
+│   │   │   │   ├── Controllers/
+│   │   │   │   ├── Dtos/
+│   │   │   │   └── Services/
+│   │   │   ├── Domain/
+│   │   │   │   ├── Entities/
+│   │   │   │   ├── Enums/
+│   │   │   │   ├── Events/
+│   │   │   │   ├── Exceptions/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── ValueObjects/
+│   │   │   ├── Infrastructure/
+│   │   │   │   ├── Mappers/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── Schemas/
+│   │   │   └── Order.module.ts
+│   │   │
+│   │   ├── Payment/
+│   │   │   ├── Application/
+│   │   │   │   ├── Controllers/
+│   │   │   │   ├── Dtos/
+│   │   │   │   └── Services/
+│   │   │   ├── Domain/
+│   │   │   │   ├── Entities/
+│   │   │   │   ├── Enums/
+│   │   │   │   ├── Events/
+│   │   │   │   ├── Exceptions/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── ValueObjects/
+│   │   │   ├── Infrastructure/
+│   │   │   │   ├── Gateways/
+│   │   │   │   ├── Mappers/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── Schemas/
+│   │   │   └── Payment.module.ts
+│   │   │
+│   │   ├── Product/
+│   │   │   ├── Application/
+│   │   │   │   ├── Controllers/
+│   │   │   │   ├── Dtos/
+│   │   │   │   ├── Mappers/
+│   │   │   │   └── Services/
+│   │   │   ├── Domain/
+│   │   │   │   ├── Entities/
+│   │   │   │   ├── Enums/
+│   │   │   │   ├── Events/
+│   │   │   │   ├── Exceptions/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── ValueObjects/
+│   │   │   ├── Infrastructure/
+│   │   │   │   ├── Mappers/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── Schemas/
+│   │   │   ├── Category.module.ts
+│   │   │   └── Product.module.ts
+│   │   │
+│   │   ├── Reviews/
+│   │   │   ├── Application/
+│   │   │   │   ├── Controllers/
+│   │   │   │   ├── Dtos/
+│   │   │   │   ├── Mappers/
+│   │   │   │   └── Services/
+│   │   │   ├── Domain/
+│   │   │   │   ├── Entities/
+│   │   │   │   ├── Exceptions/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── ValueObjects/
+│   │   │   ├── Infrastructure/
+│   │   │   │   ├── Mappers/
+│   │   │   │   ├── Repositories/
+│   │   │   │   └── Schemas/
+│   │   │   └── Review.module.ts
+│   │   │
+│   │   └── User/
+│   │       ├── Application/
+│   │       │   ├── Controllers/
+│   │       │   ├── Dtos/
+│   │       │   └── Services/
+│   │       ├── Domain/
+│   │       │   ├── Entities/
+│   │       │   ├── Enums/
+│   │       │   ├── Events/
+│   │       │   ├── Exceptions/
+│   │       │   ├── Repositories/
+│   │       │   └── ValueObjects/
+│   │       ├── Infrastructure/
+│   │       │   ├── Mappers/
+│   │       │   ├── Repositories/
+│   │       │   └── Schemas/
+│   │       └── User.module.ts
+│   │
+│   ├── Shared/
+│   │   ├── Configs/
+│   │   ├── Decorators/
+│   │   ├── Domain/
+│   │   ├── Exceptions/
+│   │   ├── Filters/
+│   │   ├── Guards/
+│   │   ├── Interceptors/
+│   │   ├── Ports/
+│   │   ├── Redis/
+│   │   ├── Storage/
+│   │   ├── Utils/
+│   │   └── Validators/
+│   │
+│   ├── app.module.ts
+│   ├── instrument.ts
+│   └── main.ts
+│
+├── .dockerignore
+├── .editorconfig
+├── .env.example
+├── .gitignore
+├── Dockerfile
+├── LICENSE
+├── README.md
+├── Structure.md
+├── docker-compose.yml
+├── package.json
+├── package-lock.json
+├── pnpm-lock.yaml
+└── tsconfig.json
+</pre>

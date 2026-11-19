@@ -9,6 +9,8 @@ class OrderInfrastructureMapper {
             userId: doc.userId,
             items: doc.items.map(i =>OrderItem.create(i.productId, i.title, i.price, i.quantity)),
             totalPrice: doc.totalPrice,
+            addressId:doc.addressId,
+            shippingAddress:doc.shippingAddress,
             status: doc.status as OrderStatus,
             paymentAuthority: doc.paymentAuthority,
             createdAt: doc.createdAt || new Date(),
@@ -21,6 +23,8 @@ class OrderInfrastructureMapper {
             userId: order.getUserId(),
             items: order.getItems().map(item => ({productId: item.productId,title: item.title,price: item.price,quantity: item.quantity,})),
             totalPrice: order.getTotalPrice(),
+            addressId:order.getAddressId(),
+            shippingAddress:order.getShippingAddress(),
             status: order.getStatus(),
             paymentAuthority: order.getPaymentAuthority()
         };

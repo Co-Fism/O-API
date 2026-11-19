@@ -5,6 +5,7 @@ import { CreateReviewDto } from '../Dtos/CreateReview.dto.js';
 import { JwtAuthGuard } from '../../../../Shared/Guards/JwtAuth.guard.js';
 import { GetUser } from '../../../../Shared/Decorators/GetUser.decorator.js';
 import { FileInterceptor } from '@nestjs/platform-express';
+import { ImageDimensionValidator } from '../../../../Shared/Validators/ImageDimension.validator.js';
 
 @ApiTags('Reviews')
 @Controller('reviews')
@@ -47,8 +48,8 @@ export class ReviewController {
     // upload
     @ApiBearerAuth()
     @ApiOperation({ summary: 'Upload an image for a review' })
-     @ApiConsumes('multipart/form-data')
-    @ApiBody({                         
+    @ApiConsumes('multipart/form-data')
+    @ApiBody({
         schema: {
             type: 'object',
             properties: {
@@ -69,6 +70,14 @@ export class ReviewController {
                 validators: [
                     new MaxFileSizeValidator({ maxSize: 2 * 1024 * 1024 }),
                     new FileTypeValidator({ fileType: '.(png|jpeg|jpg|webp)' }),
+                    new ImageDimensionValidator({
+                        minWidth: 300,
+                        maxWidth: 2000,
+                        minHeight: 300,
+                        maxHeight: 2000,
+                        allowedAspectRatios: [1, 4 / 3, 16 / 9],
+                        ratioTolerance: 0.05,
+                    })
                 ],
             }),
         ) file: Express.Multer.File,

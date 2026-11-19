@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Inject, Injectable, Param, Patch, Post, UseGuards } from '@nestjs/common';
 import { UserService } from '../Services/User.service.js';
-import { CreateUserDto } from '../Dtos/CreateUser.dto.js';
-import { UserResponseDto } from '../Dtos/UserResponse.dto.js';
+// import { CreateUserDto } from '../Dtos/CreateUser.dto.js';
+// import { UserResponseDto } from '../Dtos/UserResponse.dto.js';
 import { LoginWithEmailPassword } from '../Dtos/LoginUserWithEmailPassword.dto.js';
 import { LoginWithPhonePasswordDto } from '../Dtos/LoginUserWithPhonenumberPassword.dto.js';
 import { LoginWithUsernamePasswordDto } from '../Dtos/LoginUserWithUsernamePassword.dto.js';
@@ -34,12 +34,12 @@ class UserController {
         return this.userService.getProfile(userId);
     }
 
-    // register
-    @Throttle({ short: { limit: 2, ttl: 60000 } })
-    @Post('register')
-    async register(@Body() dto: CreateUserDto): Promise<UserResponseDto> {
-        return this.userService.register(dto);
-    }
+    // // register
+    // @Throttle({ short: { limit: 2, ttl: 60000 } })
+    // @Post('register')
+    // async register(@Body() dto: CreateUserDto): Promise<UserResponseDto> {
+    //     return this.userService.register(dto);
+    // }
 
     // register
     @Throttle({ short: { limit: 5, ttl: 60000 } })

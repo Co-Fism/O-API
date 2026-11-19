@@ -2,7 +2,17 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
 import { OrderStatus } from '../../Domain/Enums/OrderStatus.enum.js';
 
-@Schema({ _id: false }) 
+@Schema({ _id: false })
+export class ShippingAddressSchema {
+    @Prop({ type: String, required: true }) province!: string;
+    @Prop({ type: String, required: true }) city!: string;
+    @Prop({ type: String, required: true }) street!: string;
+    @Prop({ type: String, required: true }) postalCode!: string;
+    @Prop({ type: String, required: true }) receiverName!: string;
+    @Prop({ type: String, required: true }) receiverPhone!: string;
+}
+
+@Schema({ _id: false })
 class OrderItemSchema {
     @Prop({ type: String, required: true })
     productId!: string;
@@ -25,10 +35,16 @@ class OrderSchema {
     userId!: string;
 
     @Prop({ type: [OrderItemSchema], required: true })
-    items!: OrderItemSchema[]; 
+    items!: OrderItemSchema[];
 
-    @Prop({ type: Number, required: true }) 
+    @Prop({ type: Number, required: true })
     totalPrice!: number;
+
+    @Prop({ type: String, required: true })
+    addressId!: string;
+
+    @Prop({ type: ShippingAddressSchema, required: true })
+    shippingAddress!: ShippingAddressSchema;
 
     @Prop({ type: String, enum: OrderStatus, default: OrderStatus.PENDING })
     status!: OrderStatus;
@@ -41,4 +57,4 @@ class OrderSchema {
 }
 const OrderSchemaFactory = SchemaFactory.createForClass(OrderSchema);
 
-export{OrderItemSchema,OrderSchemaFactory,OrderSchema,OrderDocument}
+export { OrderItemSchema, OrderSchemaFactory, OrderSchema, OrderDocument }

@@ -3,6 +3,7 @@ import { OrderStatus } from '../Enums/OrderStatus.enum.js';
 import { ErrorOrderStatusReason, InvalidOrderStatusException } from '../Exceptions/InvalidOrderStatus.exception.js';
 import { OrderId } from '../ValueObjects/OrderId.vo.js';
 import { OrderItem } from '../ValueObjects/OrderItem.vo.js';
+import { ShippingAddressSnapshot } from './Order.props.js';
 
 class Order extends AggregateRoot {
     private constructor(
@@ -10,6 +11,8 @@ class Order extends AggregateRoot {
         private readonly userId: string,
         private items: OrderItem[],
         private totalPrice: number,
+        private readonly addressId: string,
+        private readonly shippingAddress: ShippingAddressSnapshot, 
         private status: OrderStatus,
         private paymentAuthority: string | null,
         private readonly createdAt: Date,
@@ -18,24 +21,30 @@ class Order extends AggregateRoot {
         super();
     }
 
-    static create(userId: string, items: OrderItem[]): Order {
-        const totalPrice = items.reduce((sum, item) => sum + item.getTotalPrice(), 0);
-
+    static create(props: {
+        userId: string;
+        items: OrderItem[];
+        totalPrice: number;
+        addressId: string;
+        shippingAddress: ShippingAddressSnapshot;
+    }): Order {
         return new Order(
             OrderId.generate(),
-            userId,
-            items,
-            totalPrice,
+            props.userId,
+            props.items,
+            props.totalPrice,
+            props.addressId,
+            props.shippingAddress,
             OrderStatus.PENDING,
             null,
             new Date(),
             new Date()
         );
     }
-
     static restore(props: any): Order {
         return new Order(
-            props.id, props.userId, props.items, props.totalPrice,
+            props.id, props.userId, props.items, props.totalPrice, 
+            props.addressId, props.shippingAddress,
             props.status, props.paymentAuthority, props.createdAt, props.updatedAt
         );
     }
@@ -90,6 +99,8 @@ class Order extends AggregateRoot {
     getUserId(): string { return this.userId; }
     getItems(): OrderItem[] { return this.items; }
     getTotalPrice(): number { return this.totalPrice; }
+    getAddressId(): string { return this.addressId; }
+    getShippingAddress(): ShippingAddressSnapshot { return this.shippingAddress; }
     getStatus(): OrderStatus { return this.status; }
     getPaymentAuthority(): string | null { return this.paymentAuthority }
     getCreatedAt(): Date { return this.createdAt; }

@@ -16,8 +16,8 @@ class OrderController {
         @Inject(OrderService) private readonly orderService: OrderService
     ) { }
     @Post('checkout')
-    async checkout(@GetUser('sub') userId: string, @Body() _dto: CheckoutDto) {
-        return this.orderService.checkout(userId);
+    async checkout(@GetUser('sub') userId: string, @Body() dto: CheckoutDto) {
+        return this.orderService.checkout(userId,dto);
     }
     @Get('my-orders')
     async getMyOrders(@GetUser('sub') userId: string) {

@@ -21,6 +21,7 @@ import { NotificationModule } from './Modules/Notification/Notification.module.j
 import { RedisModule } from './Shared/Redis/Redis.module.js';
 import { AuthModule } from './Modules/Auth/Auth.module.js';
 import { ReviewModule } from './Modules/Reviews/Review.module.js';
+import { AddressModule } from './Modules/Address/Address.module.js';
 
 @Module({
     imports: [
@@ -99,7 +100,8 @@ import { ReviewModule } from './Modules/Reviews/Review.module.js';
         NotificationModule,
         AuthModule,
         RedisModule,
-        ReviewModule
+        ReviewModule,
+        AddressModule
     ],
     controllers: [],
     providers: [

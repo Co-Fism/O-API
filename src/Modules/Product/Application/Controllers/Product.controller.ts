@@ -12,6 +12,7 @@ import { OptionalJwtAuthGuard } from '../../../../Shared/Guards/OptionalJwtAuth.
 import { log } from 'console';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiTags } from '@nestjs/swagger';
+import { ImageDimensionValidator } from '../../../../Shared/Validators/ImageDimension.validator.js';
 @ApiTags('Users')
 @Controller('products')
 class ProductController {
@@ -109,6 +110,14 @@ class ProductController {
                 validators: [
                     new MaxFileSizeValidator({ maxSize: 2 * 1024 * 1024 }),
                     new FileTypeValidator({ fileType: '.(png|jpeg|jpg|webp)' }),
+                    new ImageDimensionValidator({
+                        minWidth: 500,
+                        maxWidth: 2000,
+                        minHeight: 500,
+                        maxHeight: 2000,
+                        allowedAspectRatios: [1, 4 / 3],
+                        ratioTolerance: 0.02,
+                    }),
                 ],
             }),
         ) file: Express.Multer.File,

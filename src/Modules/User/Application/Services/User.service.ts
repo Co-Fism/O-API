@@ -34,12 +34,15 @@ import { InvalidPhonenumberException, PhonenumberErrorReason } from '../../Domai
 import { UserNotFoundExceptionEP } from '../../Domain/Exceptions/UserNotFoundExceptionEP.exception.js';
 import { UserNotFoundException } from '../../Domain/Exceptions/UserNotFound.exception.js';
 import { ForbiddenException } from '../../../Product/Domain/Exceptions/Forbidden.exception.js';
+import {Redis} from 'ioredis';
 
 @Injectable()
 class UserService {
     constructor(
         @Inject("IUserRepository")
         private readonly userRepository: IUserRepository,
+        @Inject('REDIS_CLIENT')
+        private readonly redis: Redis,
         private readonly eventEmitter: EventEmitter2,
         private readonly jwtService: JwtService,
     ) { }
@@ -140,6 +143,17 @@ class UserService {
         const isPasswordValid = await user.getPassword()?.compare(plainPassword);
         if (!isPasswordValid) {
             throw new UnauthorizedException('Invalid credentials');
+        }
+         const userRole = user.getRole().getValue();
+         if (userRole === UserRole.ADMIN || userRole === UserRole.SELLER) {
+            const isOtpVerified = await this.redis.get(`otp_verified:${user.getId().toString()}`);
+            
+            if (!isOtpVerified) {
+                throw new UnauthorizedException('You must verify your OTP before logging in with a password.');
+            }
+            
+            // 👈 بعد از لاگین موفق، فلگ را پاک میکنیم تا یکبارمصرف باشد
+            await this.redis.del(`otp_verified:${user.getId().toString()}`);
         }
         if (!user.canLogin()) {
             throw new UnauthorizedException('Your account is not active. Please contact support.');

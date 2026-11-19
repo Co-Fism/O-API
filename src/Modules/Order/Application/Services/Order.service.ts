@@ -18,6 +18,8 @@ import { PaymentSucceededEvent } from '../../../Payment/Domain/Events/PaymentSuc
 import { ProductReduceStock } from '../../../Product/Domain/Enums/ProductReduceStock.enum.js';
 import { OrderStatusChangedEvent } from '../../Domain/Events/OrderStatusChanged.event.js';
 import { OrderPaidEvent } from '../../Domain/Events/OrderPaid.event.js'; // make this event
+import { IAddressRepository } from '../../../Address/Domain/Repositories/Address.repository.interface.js';
+import { CheckoutDto } from '../Dtos/Checkout.dto.js';
 
 @Injectable()
 class OrderService {
@@ -29,13 +31,24 @@ class OrderService {
         @Inject('ICartRepository')
         private readonly cartRepository: ICartRepository,
         @Inject('IUserRepository')
-        private readonly userRepository: IUserRepository, // inject
+        private readonly userRepository: IUserRepository,
+        @Inject('IAddressRepository')
+        private readonly addressRepository: IAddressRepository,
         private readonly paymentService: PaymentService,
         private readonly eventEmitter: EventEmitter2,
     ) { }
 
     // checkout
-    async checkout(userId: string): Promise<Order> {
+    async checkout(userId: string, dto: CheckoutDto): Promise<Order> {
+
+        const address = await this.addressRepository.findById(dto.addressId);
+        if (!address) {
+            throw new NotFoundException('Address not found.');
+        }
+
+        if (address.getUserId() !== userId) {
+            throw new ForbiddenException('You do not have access to this address.');
+        }
         const cart = await this.cartRepository.findByUserId(userId);
         if (!cart || cart.getItems().length === 0) {
             throw new BadRequestException('Cart is Empty.');
@@ -63,7 +76,20 @@ class OrderService {
                 cartItem.getQuantity()
             ));
         }
-        const order = Order.create(userId, orderItems);
+        const order = Order.create({
+            userId: userId,
+            items: orderItems,
+            totalPrice: orderItems.reduce((sum, item) => sum + item.getTotalPrice(), 0),
+            addressId: address.getId(),
+            shippingAddress: {
+                province: address.getProvince(),
+                city: address.getCity(),
+                street: address.getStreet(),
+                postalCode: address.getPostalCode(),
+                receiverName: address.getReceiverName(),
+                receiverPhone: address.getReceiverPhone(),
+            },
+        });
         await this.orderRepository.save(order);
         cart.clearCart();
         await this.cartRepository.save(cart);
@@ -136,7 +162,7 @@ class OrderService {
 
         const order = await this.orderRepository.findById(orderId);
         if (!order) throw new NotFoundException('Order not found.');
-        
+
         switch (newStatus) {
             case OrderStatus.PROCESSING:
                 order.markAsProcessing();

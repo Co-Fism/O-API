@@ -10,6 +10,7 @@ import { OrderSchema, OrderSchemaFactory } from './Infrastructure/Schemas/Order.
 import { OrderRepositoryImpl } from './Infrastructure/Repositories/Order.repository.impl.js';
 import { PaymentModule } from '../Payment/Payment.module.js';
 import { UserModule } from '../User/User.module.js';
+import { AddressModule } from '../Address/Address.module.js';
 
 @Module({
     imports: [
@@ -19,6 +20,7 @@ import { UserModule } from '../User/User.module.js';
         UserModule,
         CartModule,
         PaymentModule,
+        AddressModule
 
     ],
     controllers: [OrderController],

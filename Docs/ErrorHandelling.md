@@ -16,7 +16,7 @@ The system separates internal exception handling from HTTP response construction
 ## Objectives
 <div align="center">
 
-[![My Skills](https://skillicons.dev/icons?i=ts,nestjs,node,&theme=dark)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=ts,nestjs,node&theme=dark)](https://skillicons.dev)
 
 </div>
 - Centralized exception handling across the API.

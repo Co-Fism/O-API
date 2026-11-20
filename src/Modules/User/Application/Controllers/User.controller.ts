@@ -17,8 +17,9 @@ import { GetUser } from '../../../../Shared/Decorators/GetUser.decorator.js';
 import { Roles } from '../../../../Shared/Decorators/Roles.decorator.js';
 import { UserRole } from '../../Domain/Enums/Role.enum.js';
 import { Throttle } from '@nestjs/throttler';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 @ApiTags('Users')
+@ApiBearerAuth()
 @Controller('users')
 @Injectable()
 class UserController {
@@ -29,6 +30,7 @@ class UserController {
 
     // profile
     @UseGuards(JwtAuthGuard)
+    
     @Get('me')
     async getProfile(@GetUser('sub') userId: string) {
         return this.userService.getProfile(userId);

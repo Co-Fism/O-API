@@ -2,6 +2,10 @@ import { IsEmail, IsEnum, IsNotEmpty, IsOptional, IsString, MaxLength, MinLength
 import { ApiProperty } from '@nestjs/swagger';
 import { UserRole } from '../../Domain/Enums/Role.enum.js';
 
+const AllowedRolesForPromote: Exclude<UserRole, UserRole.USER>[] = [
+  UserRole.SELLER,
+  UserRole.ADMIN,
+];
 export class PromoteUserDto {
     // prop
     @ApiProperty({ 
@@ -9,8 +13,8 @@ export class PromoteUserDto {
         enum: UserRole, 
         example: UserRole.SELLER 
     })
-    @IsEnum(UserRole, { message: 'Role is incorrect' })
-    newRole!: UserRole;
+    @IsEnum(AllowedRolesForPromote, { message: `Role error. Only ${AllowedRolesForPromote}` })
+    newRole!: string;
 
     // prop
     @ApiProperty({ 
@@ -41,6 +45,6 @@ export class PromoteUserDto {
         required: false 
     })
     @IsOptional()
-    @IsEmail() // 👈 تغییر از IsString به IsEmail
+    @IsEmail() 
     email?: string;
 }

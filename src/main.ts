@@ -43,8 +43,7 @@ async function bootstrap() {
     // compress
     app.use(compression());
 
-    // filters
-    app.useGlobalFilters(new DomainExceptionFilter());
+    
 
     // assets
     app.useStaticAssets(path.join(process.cwd(), 'public'), {
@@ -68,6 +67,8 @@ async function bootstrap() {
     //sentry
     const { httpAdapter } = app.get(HttpAdapterHost);
     app.useGlobalFilters(new SentryGlobalFilter(httpAdapter));
+    // filters
+    app.useGlobalFilters(new DomainExceptionFilter());
     //swaggerConfig
      const swaggerConfig = new DocumentBuilder()
         .setTitle('Shop API')

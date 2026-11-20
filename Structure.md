@@ -1,6 +1,5 @@
 <h1 align="center">O-API</h1>
-<h2 align="center">0.15.2</h2>
-<h2 align="center">mhndsy-cmd (Fism)</h2>
+<h2 align="center">0.15.3</h2>
 
 
 <pre>

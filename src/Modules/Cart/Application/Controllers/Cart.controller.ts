@@ -4,8 +4,9 @@ import { AddToCartDto } from '../Dtos/AddToCart.dto.js';
 import { UpdateCartItemDto } from '../Dtos/UpdateCartItem.dto.js';
 import { JwtAuthGuard } from '../../../../Shared/Guards/JwtAuth.guard.js';
 import { GetUser } from '../../../../Shared/Decorators/GetUser.decorator.js';
-import { ApiTags } from '@nestjs/swagger';
-@ApiTags('Users')
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+@ApiTags('Cart')
+@ApiBearerAuth()
 @UseGuards(JwtAuthGuard)
 @Controller('cart')
 class CartController {

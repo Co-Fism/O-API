@@ -13,7 +13,7 @@ import { log } from 'console';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiTags } from '@nestjs/swagger';
 import { ImageDimensionValidator } from '../../../../Shared/Validators/ImageDimension.validator.js';
-@ApiTags('Users')
+@ApiTags('Products')
 @Controller('products')
 class ProductController {
     constructor(

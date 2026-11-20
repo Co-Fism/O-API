@@ -1,5 +1,5 @@
 <h1 align="center"> O-API </h1>
-<h2 align="center"> v0.15.2-beta </h2>
+<h2 align="center"> v0.15.3-beta </h2>
 <br>
 <br>
 

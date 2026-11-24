@@ -6,6 +6,7 @@
   "author": "",
   "type": "module",
   "main": "src/main.ts",
+  "packageManager": "pnpm@10.16.0",
   "scripts": {
     "dev": "tsx watch src/main.ts",
     "build": "tsc",

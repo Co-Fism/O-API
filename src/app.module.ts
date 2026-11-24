@@ -22,6 +22,8 @@ import { RedisModule } from './Shared/Redis/Redis.module.js';
 import { AuthModule } from './Modules/Auth/Auth.module.js';
 import { ReviewModule } from './Modules/Reviews/Review.module.js';
 import { AddressModule } from './Modules/Address/Address.module.js';
+import { WalletModule } from './Modules/Wallet/Wallet.module.js';
+import { SupportModule } from './Modules/Support/Support.module.js';
 
 @Module({
     imports: [
@@ -101,7 +103,9 @@ import { AddressModule } from './Modules/Address/Address.module.js';
         AuthModule,
         RedisModule,
         ReviewModule,
-        AddressModule
+        AddressModule,
+        WalletModule,
+        SupportModule
     ],
     controllers: [],
     providers: [

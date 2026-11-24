@@ -5,8 +5,9 @@ import { JwtAuthGuard } from '../../../../Shared/Guards/JwtAuth.guard.js';
 import { RolesGuard } from '../../../../Shared/Guards/Roles.guard.js';
 import { Roles } from '../../../../Shared/Decorators/Roles.decorator.js';
 import { UserRole } from '../../../User/Domain/Enums/Role.enum.js';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 @ApiTags('Categories')
+@ApiBearerAuth()
 @Controller('categories')
 export class CategoryController {
     constructor(

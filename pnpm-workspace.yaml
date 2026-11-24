@@ -1,0 +1,5 @@
+
+minimumReleaseAge: 0
+minimumReleaseAgeExclude:
+  - 'engine.io@6.6.13'
+  - 'socket.io-adapter@2.5.9'

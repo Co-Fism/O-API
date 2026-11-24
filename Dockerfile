@@ -14,7 +14,7 @@ RUN pnpm config set registry https://registry.npmjs.org/
 COPY package.json pnpm-lock.yaml* ./
 
 # install
-RUN pnpm install --config.strict-peer-dependencies=false --config.dangerously-allow-all-builds=true
+RUN pnpm install --config.strict-peer-dependencies=false --config.dangerously-allow-all-builds=true --config.minimum-release-age=0
 
 # copy
 COPY . .
@@ -41,7 +41,7 @@ RUN pnpm config set registry https://registry.npmjs.org/
 COPY package.json pnpm-lock.yaml* ./
 
 # install production
-RUN pnpm install --prod --config.strict-peer-dependencies=false --config.dangerously-allow-all-builds=true
+RUN pnpm install --config.strict-peer-dependencies=false --config.dangerously-allow-all-builds=true --config.minimum-release-age=0
 
 # copy dist
 COPY --from=builder /app/dist ./dist

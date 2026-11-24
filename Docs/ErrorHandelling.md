@@ -1,5 +1,5 @@
 # O-API — Centralized Error Management System
-### 0.15.3
+### 0.18.5
 ### Co-Fism
 > A centralized, consistent, and extensible error management architecture for O-API.
 

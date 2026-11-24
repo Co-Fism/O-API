@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
+import {  Model } from 'mongoose';
 
 import { Category } from '../../Domain/Entities/Category.entity.js';
 
@@ -26,6 +26,7 @@ class CategoryRepositoryImpl implements ICategoryRepository {
         return this.toDomain(doc);
     }
     async findById(id: string): Promise<Category | null> {
+
         const doc = await this.categoryModel.findById(id);
         if (!doc) return null;
         return this.toDomain(doc);

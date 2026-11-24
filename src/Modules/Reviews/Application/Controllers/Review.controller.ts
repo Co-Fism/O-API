@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, UseGuards, Inject, UseInterceptors, UploadedFile, ParseFilePipe, MaxFileSizeValidator, FileTypeValidator } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, UseGuards, Inject, UseInterceptors, UploadedFile, ParseFilePipe, MaxFileSizeValidator, FileTypeValidator, Delete } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth, ApiConsumes, ApiBody } from '@nestjs/swagger';
 import { ReviewService } from '../Services/Review.service.js';
 import { CreateReviewDto } from '../Dtos/CreateReview.dto.js';
@@ -44,6 +44,23 @@ export class ReviewController {
     @Post(':id/dislike')
     async dislike(@Param('id') id: string, @GetUser('sub') userId: string) {
         return this.reviewService.dislikeReview(id, userId);
+    }
+    // remove like
+    @ApiBearerAuth()
+    @ApiOperation({ summary: 'Remove a like from a review' })
+    @UseGuards(JwtAuthGuard)
+    @Delete(':id/like')
+    async removeLike(@Param('id') id: string, @GetUser('sub') userId: string) {
+        return this.reviewService.removeLike(id, userId);
+    }
+
+    // remove dislike
+    @ApiBearerAuth()
+    @ApiOperation({ summary: 'Remove a dislike from a review' })
+    @UseGuards(JwtAuthGuard)
+    @Delete(':id/dislike')
+    async removeDislike(@Param('id') id: string, @GetUser('sub') userId: string) {
+        return this.reviewService.removeDislike(id, userId);
     }
     // upload
     @ApiBearerAuth()

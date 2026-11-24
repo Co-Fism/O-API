@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, IsNumber, IsString, MaxLength, MinLength, Min, Max } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsString, MaxLength, MinLength, Min, Max, IsMongoId } from 'class-validator';
 
 class CreateProductDto {
     @ApiProperty({ description: 'title for Create Product', example: 'Book' })
@@ -26,6 +26,8 @@ class CreateProductDto {
     @Min(0)
     maxPurchaseLimit!: number;
     @ApiProperty({ description: 'categoryId for Create Product', example: "dsds79" ,required:false})
+    @IsMongoId({ message: 'Invalid Category ID format' })
+    @IsNotEmpty()
     @IsString()
     categoryId!: string
 }

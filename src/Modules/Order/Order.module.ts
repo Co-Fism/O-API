@@ -11,6 +11,7 @@ import { OrderRepositoryImpl } from './Infrastructure/Repositories/Order.reposit
 import { PaymentModule } from '../Payment/Payment.module.js';
 import { UserModule } from '../User/User.module.js';
 import { AddressModule } from '../Address/Address.module.js';
+import { WalletModule } from '../Wallet/Wallet.module.js';
 
 @Module({
     imports: [
@@ -20,7 +21,8 @@ import { AddressModule } from '../Address/Address.module.js';
         UserModule,
         CartModule,
         PaymentModule,
-        AddressModule
+        AddressModule,
+        WalletModule
 
     ],
     controllers: [OrderController],

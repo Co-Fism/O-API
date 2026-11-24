@@ -20,6 +20,7 @@ import { OrderStatusChangedEvent } from '../../Domain/Events/OrderStatusChanged.
 import { OrderPaidEvent } from '../../Domain/Events/OrderPaid.event.js'; // make this event
 import { IAddressRepository } from '../../../Address/Domain/Repositories/Address.repository.interface.js';
 import { CheckoutDto } from '../Dtos/Checkout.dto.js';
+import { IWalletRepository } from '../../../Wallet/Domain/Repositories/Wallet.repository.interface.js';
 
 @Injectable()
 class OrderService {
@@ -34,6 +35,8 @@ class OrderService {
         private readonly userRepository: IUserRepository,
         @Inject('IAddressRepository')
         private readonly addressRepository: IAddressRepository,
+        @Inject('IWalletRepository')
+        private readonly walletRepository: IWalletRepository,
         private readonly paymentService: PaymentService,
         private readonly eventEmitter: EventEmitter2,
     ) { }
@@ -116,7 +119,46 @@ class OrderService {
 
         return { redirectUrl: paymentResult.redirectUrl };
     }
+    // pay with wallet
+    async payWithWallet(orderId: string, userId: string): Promise<{ message: string }> {
+        const order = await this.orderRepository.findById(orderId);
+        if (!order) throw new NotFoundException('Order not found.');
+        if (order.getUserId() !== userId) throw new ForbiddenException('Access denied.');
+        if (order.getStatus() !== OrderStatus.PENDING) {
+            throw new BadRequestException('This order is not in a payable status.');
+        }
+        const wallet = await this.walletRepository.findByUserId(userId);
+        if (!wallet) throw new NotFoundException('Wallet not found.');
+        if (wallet.getBalance() < order.getTotalPrice()) {
+            throw new BadRequestException('Insufficient wallet balance.');
+        }
+        wallet.withdraw(order.getTotalPrice());
+        await this.walletRepository.save(wallet);
+        order.markAsPaid();
+        await this.orderRepository.save(order);
 
+        for (const item of order.getItems()) {
+            const product = await this.productRepository.findById(ProductId.createFromPlain(item.productId));
+            if (product) {
+                product.reduceStock(item.quantity, ProductReduceStock.PURCHASE);
+                await this.productRepository.save(product);
+            }
+        }
+
+        const user = await this.userRepository.findById(UserId.createFromPlain(userId));
+        this.eventEmitter.emit(
+            'OrderPaidEvent',
+            new OrderPaidEvent( 
+                order.getStringId(), 
+                'WALLET_PAYMENT',
+                order.getTotalPrice(),
+                user?.getEmail()?.getValue() ?? null,
+                user?.getPhonenumber().getValue() ?? ''
+            )
+        );
+
+        return { message: 'Payment successful via wallet.' };
+    }
     // payment
     @OnEvent('PaymentSucceededEvent')
     async handlePaymentSucceeded(event: PaymentSucceededEvent): Promise<void> {

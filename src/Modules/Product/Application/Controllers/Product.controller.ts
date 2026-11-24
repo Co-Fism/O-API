@@ -11,9 +11,10 @@ import { RestockProductDto } from '../Dtos/RestockProduct.dto.js';
 import { OptionalJwtAuthGuard } from '../../../../Shared/Guards/OptionalJwtAuth.guard.js';
 import { log } from 'console';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { ImageDimensionValidator } from '../../../../Shared/Validators/ImageDimension.validator.js';
 @ApiTags('Products')
+@ApiBearerAuth()
 @Controller('products')
 class ProductController {
     constructor(

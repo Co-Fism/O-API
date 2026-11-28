@@ -168,6 +168,9 @@ Note: WebSocket events are not REST endpoints and cannot be tested directly thro
 - [ ] Real Payment Gateway Integration (ZarinPal)
 - [ ] Real SMS/Email Provider Integration (Kavenegar, etc.)
 - [ ] Automated Unit & E2E Testing
+- [ ] add bots for upgrade commerce (support, Assistant, Anti-vandalism, Algorithm)
+- [ ] Adding a data-fetching capability powered by the proprietary "O-API" AI to significantly enhance bot performance and e-commerce analysis.
+- [ ] Adding a control center for individual, group, and global features, as well as bots and AI, for owner-admins or admins with high-level access.
 
 ---
 
